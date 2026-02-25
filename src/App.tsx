@@ -1,13 +1,16 @@
-import { Camera } from 'lucide-react'
+import Layout from "./Layout"
 
 function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded-2xl shadow-xl flex flex-col items-center gap-4">
-        <Camera className="w-10 h-10 text-blue-600" />
-        <h1 className="text-2xl font-semibold">React + Tailwind v3 + TypeScript</h1>
+    <Layout>
+      <div className="space-y-6">
+        {Array.from({ length: 30 }).map((_, i) => (
+          <div key={i} className="bg-white p-6 rounded-xl shadow">
+            Content Card {i + 1}
+          </div>
+        ))}
       </div>
-    </div>
+    </Layout>
   )
 }
 
