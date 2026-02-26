@@ -4,7 +4,7 @@ import Sidebar from "./Sidebar"
 
 function Layout() {
   return (
-    <div className="h-screen flex bg-gray-100">
+    <div className="h-screen flex bg-[#F9FAFB]">
       <Sidebar />
       <div className="flex-1 flex flex-col">
         <Header />

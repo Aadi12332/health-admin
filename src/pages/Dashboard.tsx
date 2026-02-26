@@ -36,13 +36,13 @@ const stats = [
 function Dashboard() {
   return (
     <div className="space-y-5">
-<PageHeader
-  title="Welcome back, Sarah 👋"
-  subtitle="Here’s your system overview for today."
-  buttonText="Back To Website"
-  buttonIcon={BackArrow}
-  onClick={() => console.log("Back clicked")}
-/>
+      <PageHeader
+        title="Welcome back, Sarah 👋"
+        subtitle="Here’s your system overview for today."
+        buttonText="Back To Website"
+        buttonIcon={BackArrow}
+        onClick={() => console.log("Back clicked")}
+      />
 
       <div className="grid lg:grid-cols-4 grid-cols-2 gap-3">
         {stats.map((item, index) => (
