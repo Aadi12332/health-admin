@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 import {
   LayoutDashboard,
   Stethoscope,
@@ -25,10 +25,11 @@ const menu = [
 ]
 
 function Sidebar() {
+  const navigate = useNavigate()
   return (
     <aside className="w-[255px] min-w-[255px] bg-white border-r border-[#E5E7EB] h-screen flex flex-col">
       <div className="p-6">
-        <img src={Logo} alt="logo" className="w-[173px]" />
+        <img src={Logo} alt="logo" className="w-[173px] cursor-pointer" onClick={() => navigate("/")} />
       </div>
 
       <div className="border-t border-[#E5E7EB]" />

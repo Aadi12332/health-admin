@@ -67,7 +67,7 @@ function BillingTabs() {
         </button>
       </div>
 
-      {/* {active === "consultation" && (
+      {active === "consultation" && (
         <BillingList />
       )}
 
@@ -86,7 +86,7 @@ function BillingTabs() {
 
       {active === "financial" &&
         <RevenueDashboard />
-        } */}
+        }
     </div>
   );
 }
