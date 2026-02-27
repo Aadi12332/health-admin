@@ -27,7 +27,7 @@ function Billing() {
   return (
     <div className="space-y-5">
       <PageHeader
-        title="Billing and revenue management"
+        title="Billing and Revenue Management"
         subtitle="Manage financial transactions, commissions, payouts and reports"
       />
 

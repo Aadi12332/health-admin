@@ -5,7 +5,7 @@ function Security() {
   return (
     <div className="space-y-5">
       <PageHeader
-        title="Security and compliance"
+        title="Security and Compliance"
         subtitle="Manage security and compliance settings to  protect sensitive healthcare data"
       />
 

@@ -145,7 +145,7 @@ const [selectedPatient, setSelectedPatient] = useState<any>(null)
               : "text-black"
           }`}
         >
-          cancelled
+          Cancelled
         </button>
       </div>
 
