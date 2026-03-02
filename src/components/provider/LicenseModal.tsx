@@ -11,7 +11,7 @@ function LicenseModal({ open, onClose, image }: Props) {
 
   return (
     <div onClick={onClose} className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 !mt-0">
-      <div onClick={(e)=>e.stopPropagation()} className="bg-white w-[95%] max-w-[778px] rounded-[10px] p-8 relative">
+      <div onClick={(e)=>e.stopPropagation()} className="bg-white w-[95%] max-w-[778px] rounded-[10px] lg:p-6 p-3 relative">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-[20px] text-[#000000]">
             License and Credentials
@@ -21,7 +21,7 @@ function LicenseModal({ open, onClose, image }: Props) {
           </button>
         </div>
 
-        <div className="-space-y-[270px] flex flex-col justify-center items-center w-fit mx-auto shadow-md rounded-[24px]">
+        <div className="md:-space-y-[270px] -space-y-[55%] flex flex-col justify-center items-center w-fit mx-auto shadow-md rounded-[24px]">
           <img
             src={image}
             alt="license"

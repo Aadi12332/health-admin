@@ -43,12 +43,12 @@ function ChatFileSharingSettings() {
   })
 
   return (
-    <div className="bg-white border border-[##0000001A] rounded-[10px] p-6">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+    <div className="bg-white border border-[##0000001A] rounded-lg lg:rounded-[10px] lg:p-6 p-3">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:gap-10 gap-5">
         <div>
           <h2 className="text-[18px] font-medium mb-4">Chat</h2>
 
-          <div className="border border-[##0000001A] rounded-2xl p-6 space-y-8">
+          <div className="border border-[##0000001A] lg:rounded-2xl rounded-lg p-3 lg:p-6 space-y-8">
             {[
               { label: "Enable chat for virtual consultation", key: "enableChat" },
               { label: "One- way patient chat", key: "oneWay" },
@@ -57,7 +57,7 @@ function ChatFileSharingSettings() {
               { label: "Emojis", key: "emojis" },
               { label: "Delete conversation", key: "deleteConversation" }
             ].map((item) => (
-              <div key={item.key} className="flex justify-between items-center">
+              <div key={item.key} className="flex justify-between items-center gap-3">
                 <span>{item.label}</span>
                 <Toggle
                   checked={chat[item.key as keyof typeof chat]}
@@ -77,7 +77,7 @@ function ChatFileSharingSettings() {
         <div>
           <h2 className="text-[18px] font-medium mb-4">File Sharing</h2>
 
-          <div className="border border-[##0000001A] rounded-2xl p-6 space-y-8">
+          <div className="border border-[##0000001A] lg:rounded-2xl rounded-lg p-3 lg:p-6 space-y-8">
             {[
               { label: "Enable Secure file sharing", key: "secure" },
               { label: "Upload medical images", key: "images" },
@@ -86,7 +86,7 @@ function ChatFileSharingSettings() {
               { label: "Allow all file types", key: "allTypes" },
               { label: "Upload videos", key: "videos" }
             ].map((item) => (
-              <div key={item.key} className="flex justify-between items-center">
+              <div key={item.key} className="flex justify-between items-center gap-3">
                 <span>{item.label}</span>
                 <Toggle
                   checked={

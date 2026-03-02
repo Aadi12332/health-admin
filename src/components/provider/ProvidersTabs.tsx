@@ -106,10 +106,10 @@ function ProvidersTabs() {
         pendingProviders.map((p) => (
           <div
             key={p.id}
-            className="bg-white rounded-2xl border border-[#E5E7EB] p-8 space-y-8"
+            className="bg-white rounded-2xl border border-[#E5E7EB] lg:p-6 p-3 space-y-8"
           >
             <div className="flex justify-between items-center relative">
-              <div className="grid grid-cols-2 gap-10 items-center flex-1">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-10 gap-5 items-center flex-1">
                 <div className="flex gap-6 items-center">
                   <img
                     src={p.image}
@@ -137,7 +137,7 @@ function ProvidersTabs() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-10 gap-5">
               <div>
                 <p className="text-[18px] font-medium text-[#101828] mb-4">
                   Assign
@@ -185,13 +185,13 @@ function ProvidersTabs() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
                   <p className="text-[18px] font-medium text-[#101828] mb-4">
                     Accounts
                   </p>
 
-                  <div className="flex gap-6 text-[#667085]">
+                  <div className="flex lg:gap-6 gap-2 text-[#667085]">
                     {["Enable", "Disable"].map((option) => (
                       <label key={option} className="flex items-center gap-2">
                         <input
@@ -221,7 +221,7 @@ function ProvidersTabs() {
                     Pricing
                   </p>
 
-                  <div className="flex gap-6 text-[#667085]">
+                  <div className="flex lg:gap-6 gap-2 text-[#667085]">
                     {["Fixed", "Variable"].map((option) => (
                       <label key={option} className="flex items-center gap-2">
                         <input
@@ -238,7 +238,7 @@ function ProvidersTabs() {
               </div>
             </div>
 
-            <div className="flex gap-6">
+            <div className="flex lg:gap-10 gap-5">
               <button onClick={() => setOpenApproved(true)} className="flex-1 bg-gradient-to-b from-[#219580] to-[#346079] text-white h-[36px] rounded-lg flex items-center gap-3 justify-center text-[16px] font-medium">
                 <Check size={16} />
                 Approve
@@ -256,10 +256,10 @@ function ProvidersTabs() {
         verifiedProviders.map((p) => (
           <div
             key={p.name}
-            className="bg-white rounded-2xl border border-[#E5E7EB] p-8 space-y-8"
+            className="bg-white rounded-2xl border border-[#E5E7EB] lg:p-6 p-3 space-y-8"
           >
             <div className="relative">
-              <div className="grid grid-cols-2 items-center gap-10">
+              <div className="grid md:grid-cols-2 grid-cols-1 items-center lg:gap-10 gap-5">
                 <div className="flex items-center gap-6">
                   <img
                     src={p.image}
@@ -288,12 +288,12 @@ function ProvidersTabs() {
               </div>
             </div>
 
-            <div className="flex gap-8">
-              <button className="flex-1 h-[36px] bg-gradient-to-b from-[#219580] to-[#346079] text-white rounded-lg text-[16px] font-medium">
+            <div className="flex lg:gap-10 sm:gap-5 gap-2">
+              <button className="flex-1 px-2 min-h-[36px] bg-gradient-to-b from-[#219580] to-[#346079] text-white rounded-lg text-[16px] font-medium">
                 Remove Verification
               </button>
 
-              <button onClick={() => setOpenEdit(true)} className="flex-1 h-[36px] border border-[#D0D5DD] text-[#344054] rounded-lg text-[16px] font-medium">
+              <button onClick={() => setOpenEdit(true)} className="flex-1 px-2 min-h-[36px] border border-[#D0D5DD] text-[#344054] rounded-lg text-[16px] font-medium">
                 Edit Details
               </button>
             </div>

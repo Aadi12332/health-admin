@@ -32,7 +32,7 @@ function RevenueDashboard() {
   return (
     <div className="grid grid-cols-1 xl:grid-cols-2 gap-5">
 
-      <div className="bg-white border border-[#0000001A] rounded-[14px] p-6">
+      <div className="bg-white border border-[#0000001A] lg:rounded-[14px] rounded-lg lg:p-6 p-3">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-[18px] text-[#0A0A0A]">
             Revenue & Payouts
@@ -87,10 +87,10 @@ function RevenueDashboard() {
         </ResponsiveContainer>
       </div>
 
-      <div className="bg-white border border-[#0000001A] rounded-[14px] p-6">
+      <div className="bg-white border border-[#0000001A] lg:rounded-[14px] rounded-lg lg:p-6 p-3">
         <h2 className="text-[18px] mb-6">Export Data</h2>
 
-        <div className="flex gap-4 mb-6">
+        <div className="flex sm:flex-row flex-col gap-4 mb-6">
           <input
             type="date"
             placeholder="From"
@@ -133,7 +133,7 @@ function RevenueDashboard() {
         </button>
       </div>
 
-      <div className="bg-white border border-[#0000001A] rounded-[14px] p-6">
+      <div className="bg-white border border-[#0000001A] lg:rounded-[14px] rounded-lg lg:p-6 p-3">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-[18px]">Revenue Breakdown</h2>
           <button className="flex items-center gap-2 border border-[#E5E7EB] px-4 py-1 text-[#0A0A0A] rounded-lg text-sm">
@@ -164,7 +164,7 @@ function RevenueDashboard() {
         </table>
       </div>
 
-      <div className="bg-white border border-[#0000001A] rounded-[14px] p-6">
+      <div className="bg-white border border-[#0000001A] lg:rounded-[14px] rounded-lg lg:p-6 p-3">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-[18px]">Expense Breakdown</h2>
           <button className="flex items-center gap-2 border border-[#E5E7EB] px-4 py-1 text-[#0A0A0A] rounded-lg text-sm">

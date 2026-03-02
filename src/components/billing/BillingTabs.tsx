@@ -10,7 +10,8 @@ function BillingTabs() {
 
   return (
     <div>
-      <div className="bg-[#E5E7EB] p-1 rounded-full w-full justify-between flex gap-2 mb-5">
+      <div className="w-[calc(100vw-24px)] lg:w-full overflow-x-auto scroll-hide">
+        <div className="bg-[#E5E7EB] p-1 rounded-full lg:justify-between flex gap-2 mb-5 lg:w-full w-[700px]">
         <button
           onClick={() => setActive("consultation")}
           className={`px-6 py-2 rounded-full text-sm ${
@@ -65,6 +66,7 @@ function BillingTabs() {
         >
           Financial Reports 
         </button>
+        </div>
       </div>
 
       {active === "consultation" && (

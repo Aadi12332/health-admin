@@ -4,7 +4,7 @@ function Toggle({ enabled, onChange }: any) {
   return (
     <button
       onClick={() => onChange(!enabled)}
-      className={`w-[46px] h-6 flex items-center rounded-full transition ${
+      className={`w-[46px] min-w-[46px] h-6 flex items-center rounded-full transition ${
         enabled ? "bg-[#219580]" : "bg-gray-300"
       }`}
     >
@@ -56,11 +56,11 @@ function MessageSettings() {
   ]
 
   return (
-    <div className="bg-white border border-[#0000001A] rounded-[14px] p-6">
+    <div className="bg-white border border-[#0000001A] lg:rounded-[14px] rounded-lg lg:p-6 p-3">
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
 
         <div>
-          <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center justify-between mb-6 gap-3 flex-wrap">
             <h2 className="text-[18px]">Message Templates</h2>
 
             <div className="bg-[#E5E7EB] p-1 rounded-full flex">
@@ -87,7 +87,7 @@ function MessageSettings() {
             </div>
           </div>
 
-          <div className="border border-[#0000001A] rounded-[14px] p-6 space-y-6">
+          <div className="border border-[#0000001A] lg:rounded-[14px] rounded-lg lg:p-6 p-3 space-y-6">
             {templateItems.map((item, i) => (
               <div key={i} className="flex justify-between items-start">
                 <div>
@@ -109,9 +109,9 @@ function MessageSettings() {
             Appointment Reminders & Alerts
           </h3>
 
-          <div className="border border-[#0000001A] rounded-[14px] p-6 space-y-6">
+          <div className="border border-[#0000001A] lg:rounded-[14px] rounded-lg lg:p-6 p-3 space-y-6">
             {appointmentAlerts.map((item, i) => (
-              <div key={i} className="flex justify-between items-center">
+              <div key={i} className="flex justify-between items-center gap-3">
                 <p>{item}</p>
                 <Toggle enabled={true} onChange={() => {}} />
               </div>
@@ -122,7 +122,7 @@ function MessageSettings() {
         <div>
           <h2 className="text-[18px] mb-8">Announcements</h2>
 
-          <div className="border border-[#0000001A] rounded-[14px] p-6 space-y-6">
+          <div className="border border-[#0000001A] lg:rounded-[14px] rounded-lg lg:p-6 p-3 space-y-6">
             {announcements.map((item, i) => (
               <div key={i} className="flex justify-between">
                 <div>
@@ -136,16 +136,16 @@ function MessageSettings() {
             ))}
 
             <div className="flex gap-4">
-              <button className="flex-1 bg-gradient-to-b from-[#219580] to-[#346079] text-white py-2 rounded-lg">
+              <button className="flex-1 bg-gradient-to-b from-[#219580] to-[#346079] text-white py-2 rounded-lg px-2">
                 Add New Announcement
               </button>
-              <button className="flex-1 border border-[#219580] text-[#219580] py-2 rounded-lg">
+              <button className="flex-1 border border-[#219580] text-[#219580] py-2 rounded-lg px-2">
                 Notify All Users
               </button>
             </div>
           </div>
 
-          <div className="flex items-center justify-between mt-8 mb-4">
+          <div className="flex items-center justify-between gap-3 flex-wrap mt-8 mb-4">
             <h3 className="text-[16px]">Notification Settings</h3>
 
             <div className="bg-[#E5E7EB] p-1 rounded-full flex">
@@ -172,9 +172,9 @@ function MessageSettings() {
             </div>
           </div>
 
-          <div className="border border-[#0000001A] rounded-[14px] p-6 space-y-6">
+          <div className="border border-[#0000001A] lg:rounded-[14px] rounded-lg lg:p-6 p-3 space-y-6">
             {notifyItems.map((item, i) => (
-              <div key={i} className="flex justify-between items-center">
+              <div key={i} className="flex justify-between items-center gap-3">
                 <p>{item}</p>
                 <Toggle enabled={true} onChange={() => {}} />
               </div>

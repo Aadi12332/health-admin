@@ -55,7 +55,7 @@ function BillingList() {
       {payments.map((item, i) => (
         <div
           key={i}
-          className="bg-white border border-[#0000001A] rounded-[14px] p-6 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6"
+          className="bg-white border border-[#0000001A] lg:rounded-[14px] rounded-lg lg:p-6 p-3 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6"
         >
           <div className="flex-1">
             <div className="flex flex-col sm:flex-row sm:gap-20 gap-4">

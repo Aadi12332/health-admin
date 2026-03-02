@@ -144,10 +144,10 @@ const [selectedPatient, setSelectedPatient] = useState<any>(null)
           {activePatients.map((p, i) => (
             <div
               key={i}
-              className="bg-white rounded-[14px] border border-[#E5E7EB] p-4 flex flex-col justify-between"
+              className="bg-white rounded-[14px] border border-[#E5E7EB] lg:p-5 p-3 flex flex-col justify-between"
             >
               <div>
-                <div className="flex justify-between items-start mb-6">
+                <div className="flex justify-between items-start mb-6 flex-wrap gap-3">
                   <div className="flex gap-4 items-center">
                     <img
                       src={p.image}
@@ -168,7 +168,7 @@ const [selectedPatient, setSelectedPatient] = useState<any>(null)
                   </button>
                 </div>
 
-                <div className="flex gap-3 mb-6">
+                <div className="flex gap-3 mb-6 flex-wrap">
                   <div>
                     <p className="text-[#4A5565] text-sm">Age</p>
                     <p className="text-[#000] text-sm mt-1">{p.age}</p>
@@ -230,7 +230,7 @@ const [selectedPatient, setSelectedPatient] = useState<any>(null)
         disputes.map((d, i) => (
           <div
             key={i}
-            className="bg-white rounded-2xl border border-[#E5E7EB] p-6 mb-5 last:mb-0"
+            className="bg-white lg:rounded-2xl rounded-lg border border-[#E5E7EB] lg:p-6 p-3 mb-5 last:mb-0"
           >
             <div className="flex justify-between items-start mb-6">
               <div className="flex gap-4 items-center">
@@ -250,7 +250,7 @@ const [selectedPatient, setSelectedPatient] = useState<any>(null)
               </span>
             </div>
 
-            <div className="grid grid-cols-4 gap-10">
+            <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5 lg:gap-10">
               <div>
                 <p className="text-[#667085] text-base">Dispute No.</p>
                 <p className="text-[#000] text-sm mt-1">{d.disputeNo}</p>

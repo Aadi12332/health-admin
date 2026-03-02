@@ -23,7 +23,7 @@ function SecuritySettings() {
   const [otp, setOtp] = useState(true)
 
   return (
-    <div className="bg-white border border-[#0000001A] rounded-[14px] p-6">
+    <div className="bg-white border border-[#0000001A] lg:rounded-[14px] rounded-lg lg:p-6 p-3">
 
       <div className="grid md:grid-cols-2 gap-6">
 
@@ -31,7 +31,7 @@ function SecuritySettings() {
         <div>
           <h2 className="text-lg mb-4">Security Settings</h2>
 
-          <div className="border border-[#0000001A] rounded-[14px] p-6 space-y-8">
+          <div className="border border-[#0000001A] lg:rounded-[14px] rounded-lg lg:p-6 p-3 space-y-8">
 
             {/* Auto Log Off */}
             <div className="flex items-center justify-between">
@@ -68,7 +68,7 @@ function SecuritySettings() {
         <div>
           <h2 className="text-lg mb-4">Data Security</h2>
 
-          <div className="border border-[#0000001A] rounded-[14px] p-6 space-y-8">
+          <div className="border border-[#0000001A] lg:rounded-[14px] rounded-lg lg:p-6 p-3 space-y-8">
 
             <div className="flex items-center justify-between">
               <p>All Patients Data</p>

@@ -80,7 +80,7 @@ function PermissionsManagement() {
         <div key={index}>
           <h2 className="text-[18px] mb-4">{section.title}</h2>
 
-          <div className="bg-white border border-[#0000001A] rounded-[14px] p-6">
+          <div className="bg-white border border-[#0000001A] lg:rounded-[14px] rounded-lg lg:p-6 p-3">
 
             <div className="grid grid-cols-3 mb-6 font-medium text-[#667085]">
               <div></div>
@@ -91,7 +91,7 @@ function PermissionsManagement() {
             {section.items.map((item, i) => (
               <div
                 key={i}
-                className="grid grid-cols-3 items-center py-4"
+                className="grid grid-cols-3 items-center py-4 gap-3"
               >
                 <div>{item}</div>
 

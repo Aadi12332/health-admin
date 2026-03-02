@@ -42,8 +42,8 @@ function RevenueChart() {
   };
 
   return (
-    <div className="bg-white p-6 rounded-[14px] border border-[#0000001A] h-[420px]">
-      <div className="flex items-center justify-between mb-6">
+    <div className="bg-white lg:p-6 p-3 rounded-lg lg:rounded-[14px] border border-[#0000001A]">
+      <div className="flex items-start gap-3 sm:justify-between mb-6 sm:flex-row flex-col sm:items-center">
         <h2 className="text-[20px] text-[#0A0A0A]">
           Platform Revenue
         </h2>
@@ -65,7 +65,7 @@ function RevenueChart() {
         </div>
       </div>
 
-      <ResponsiveContainer width="100%" height="85%">
+      <ResponsiveContainer width="100%" height={300}>
         <LineChart
           data={getData()}
           margin={{ top: 0, right: 5, left: -20, bottom: 0 }}

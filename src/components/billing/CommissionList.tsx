@@ -56,7 +56,7 @@ function CommissionList() {
       {providers.map((item) => (
         <div
           key={item.id}
-          className="bg-white border border-[#0000001A] rounded-[14px] p-6 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6"
+          className="bg-white border border-[#0000001A] lg:rounded-[14px] rounded-lg lg:p-6 p-3 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6"
         >
           <div className="flex items-center gap-4">
             <img

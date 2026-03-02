@@ -11,14 +11,14 @@ function WaitingRoomSettings() {
   })
 
   return (
-    <div className="bg-white border border-[##0000001A] rounded-[10px] p-6">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+    <div className="bg-white border border-[##0000001A] rounded-lg lg:rounded-[10px] lg:p-6 p-3">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:gap-10 gap-5">
         <div>
           <h2 className="text-[18px] font-medium mb-4">
             Background & Welcome Message
           </h2>
 
-          <div className="border border-[##0000001A] rounded-2xl p-6">
+          <div className="border border-[##0000001A] lg:rounded-2xl rounded-lg p-3 lg:p-6">
             <div className="h-48 bg-gray-100 rounded-xl flex items-center justify-center mb-6 relative overflow-hidden">
               <div className="absolute inset-0 bg-[linear-gradient(45deg,#f3f4f6_25%,transparent_25%,transparent_50%,#f3f4f6_50%,#f3f4f6_75%,transparent_75%,transparent)] bg-[length:40px_40px] opacity-40" />
               <button className="relative border border-[#219580] text-[#219580] px-6 py-2 rounded-lg bg-white">
@@ -48,8 +48,8 @@ function WaitingRoomSettings() {
             General Settings
           </h2>
 
-          <div className="border border-[##0000001A] rounded-2xl p-6 space-y-8">
-            <div className="flex justify-between items-center">
+          <div className="border border-[##0000001A] lg:rounded-2xl rounded-lg p-3 lg:p-6 space-y-8">
+            <div className="flex justify-between items-center gap-3">
               <span>Max Waiting Time</span>
               <select
                 value={form.maxWaiting}
@@ -68,7 +68,7 @@ function WaitingRoomSettings() {
               </select>
             </div>
 
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center gap-3">
               <span>Play background music</span>
               <select
                 value={form.music}
@@ -84,7 +84,7 @@ function WaitingRoomSettings() {
               </select>
             </div>
 
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center gap-3">
               <span>Default Estimated Wait Time</span>
               <select
                 value={form.defaultWait}
@@ -103,7 +103,7 @@ function WaitingRoomSettings() {
               </select>
             </div>
 
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center gap-3">
               <span>Display Queue Numbers</span>
               <select
                 value={form.queue}

@@ -23,7 +23,7 @@ function DataSecurityAdvanced() {
   const [incrementalBackup, setIncrementalBackup] = useState(true)
 
   return (
-    <div className="bg-white border border-[#0000001A] rounded-[14px] p-6 space-y-8">
+    <div className="bg-white border border-[#0000001A] lg:rounded-[14px] rounded-lg lg:p-6 p-3 space-y-8">
 
       <div className="grid md:grid-cols-2 gap-6">
 
@@ -32,12 +32,12 @@ function DataSecurityAdvanced() {
 
           <div className="border border-[#0000001A] rounded-[8px] p-3 space-y-6">
 
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center gap-3">
               <p>Encryption Status</p>
               <Toggle enabled={encryptionEnabled} onChange={setEncryptionEnabled} />
             </div>
 
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center gap-3 flex-wrap">
               <p>Encryption Protocols</p>
               <select className="border border-[#0000001A] rounded-md px-2 py-2 outline-none text-sm max-w-[250px]">
                 <option>AES-256 (Advanced Encryption Standards)</option>
@@ -46,7 +46,7 @@ function DataSecurityAdvanced() {
               </select>
             </div>
 
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center gap-3 ">
               <p>Encrypt Data In-Transit (TLS)</p>
               <Toggle enabled={tlsEnabled} onChange={setTlsEnabled} />
             </div>
@@ -59,7 +59,7 @@ function DataSecurityAdvanced() {
 
           <div className="border border-[#0000001A] rounded-[8px] p-3 space-y-6">
             {[1, 2, 3].map((_, i) => (
-              <div key={i} className="flex justify-between">
+              <div key={i} className="flex justify-between gap-3">
                 <p>April 14, 2024/2:00 UTC</p>
                 <p className="text-[#219580]">
                   End to End Encrypted (AES-256)
@@ -92,7 +92,7 @@ function DataSecurityAdvanced() {
                 </select>
               </div>
             </div>
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center gap-3">
               <p>Enable Incremental Backups</p>
               <Toggle
                 enabled={incrementalBackup}
@@ -100,7 +100,7 @@ function DataSecurityAdvanced() {
               />
             </div>
 
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center gap-3">
               <p>Retention Period</p>
               <select className="border border-[#0000001A] rounded-md px-4 py-2">
                 <option>30 Days</option>

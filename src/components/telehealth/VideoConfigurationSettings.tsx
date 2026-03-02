@@ -40,30 +40,30 @@ function VideoConfigurationSettings() {
   })
 
   return (
-    <div className="bg-white border border-[##0000001A] rounded-[10px] p-6">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+    <div className="bg-white border border-[##0000001A] rounded-lg lg:rounded-[10px] lg:p-6 p-3">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:gap-10 gap-5">
         <div className="space-y-8">
           <div>
             <h2 className="text-[18px] font-medium mb-4">
               Video & Audio
             </h2>
 
-            <div className="border border-[##0000001A] rounded-2xl p-6 space-y-6">
-              <div className="flex justify-between items-center">
+            <div className="border border-[##0000001A] lg:rounded-2xl rounded-lg p-3 lg:p-6 space-y-6">
+              <div className="flex justify-between items-center gap-3">
                 <span>Camera</span>
                 <select className="border border-gray-300 rounded-md px-3 py-1">
                   <option>HD Webcam</option>
                 </select>
               </div>
 
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center gap-3">
                 <span>Microphones</span>
                 <select className="border border-gray-300 rounded-md px-3 py-1">
                   <option>Built-In Mic</option>
                 </select>
               </div>
 
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center gap-3">
                 <span>Speakers</span>
                 <select className="border border-gray-300 rounded-md px-3 py-1">
                   <option>System Output</option>
@@ -77,8 +77,8 @@ function VideoConfigurationSettings() {
               Network
             </h2>
 
-            <div className="border border-[##0000001A] rounded-2xl p-6 space-y-6">
-              <div className="flex justify-between items-center">
+            <div className="border border-[##0000001A] lg:rounded-2xl rounded-lg p-3 lg:p-6 space-y-6">
+              <div className="flex justify-between items-center gap-3">
                 <span>
                   Auto adjust resolution for slow networks
                 </span>
@@ -93,7 +93,7 @@ function VideoConfigurationSettings() {
                 />
               </div>
 
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center gap-3">
                 <span>
                   Alert when connection is weak
                 </span>
@@ -108,7 +108,7 @@ function VideoConfigurationSettings() {
                 />
               </div>
 
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center gap-3">
                 <span>Enable HD video</span>
                 <Toggle
                   checked={network.hdVideo}
@@ -129,7 +129,7 @@ function VideoConfigurationSettings() {
             Additional Settings
           </h2>
 
-          <div className="border border-[##0000001A] rounded-2xl p-6 space-y-6">
+          <div className="border border-[##0000001A] lg:rounded-2xl rounded-lg p-3 lg:p-6 space-y-6">
             {[
               {
                 label: "Allow session recording",
@@ -159,7 +159,7 @@ function VideoConfigurationSettings() {
             ].map((item) => (
               <div
                 key={item.key}
-                className="flex justify-between items-center"
+                className="flex justify-between items-center gap-3"
               >
                 <span>{item.label}</span>
                 <Toggle

@@ -61,7 +61,7 @@ function AnalyticsDashboard() {
   return (
     <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
 
-      <div className="bg-white border border-[#0000001A] rounded-[14px] p-6">
+      <div className="bg-white border border-[#0000001A] lg:rounded-[14px] rounded-lg lg:p-6 p-3">
         <div className="flex justify-between mb-6">
           <h2 className="text-[18px]">Consultation Volume</h2>
           <button className="flex items-center gap-2 border px-3 py-1 rounded-lg text-sm">
@@ -87,7 +87,7 @@ function AnalyticsDashboard() {
         </ResponsiveContainer>
       </div>
 
-      <div className="bg-white border border-[#0000001A] rounded-[14px] p-6">
+      <div className="bg-white border border-[#0000001A] lg:rounded-[14px] rounded-lg lg:p-6 p-3">
         <div className="flex justify-between mb-6">
           <h2 className="text-[18px]">Revenue & Commission</h2>
           <button className="flex items-center gap-2 border px-3 py-1 rounded-lg text-sm">
@@ -109,7 +109,7 @@ function AnalyticsDashboard() {
         </ResponsiveContainer>
       </div>
 
-      <div className="bg-white border border-[#0000001A] rounded-[14px] p-6 max-h-[360px] overflow-y-auto scroll-hide">
+      <div className="bg-white border border-[#0000001A] lg:rounded-[14px] rounded-lg lg:p-6 p-3 max-h-[360px]">
         <div className="flex justify-between mb-6">
           <h2 className="text-[18px]">Provider Activity</h2>
           <button className="flex items-center gap-2 border px-3 py-1 rounded-lg text-sm">
@@ -117,8 +117,9 @@ function AnalyticsDashboard() {
             Export
           </button>
         </div>
-
-        {providers.map((item, i) => (
+<div className="overflow-auto scroll-hide">
+        <div className="overflow-y-auto scroll-hide h-[270px] min-w-[600px]">
+          {providers.map((item, i) => (
           <div key={i} className="flex justify-between gap-2 items-center mb-6 last:mb-0">
             <img src="https://i.pravatar.cc/150?img=10" className="w-10 h-10 rounded-full object-cover" alt="" />
             <div>
@@ -142,9 +143,12 @@ function AnalyticsDashboard() {
             </div>
           </div>
         ))}
+        </div>
+
+</div>
       </div>
 
-      <div className="bg-white border border-[#0000001A] rounded-[14px] p-6">
+      <div className="bg-white border border-[#0000001A] lg:rounded-[14px] rounded-lg lg:p-6 p-3">
         <div className="flex justify-between mb-6">
           <h2 className="text-[18px]">Patient Engagement</h2>
           <button className="flex items-center gap-2 border px-3 py-1 rounded-lg text-sm">

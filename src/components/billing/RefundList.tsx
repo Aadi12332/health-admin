@@ -65,7 +65,7 @@ function RefundList() {
       {refundData.map((item) => (
         <div
           key={item.id}
-          className="bg-white border border-[#E5E7EB] rounded-2xl p-6 flex flex-col gap-5"
+          className="bg-white border border-[#E5E7EB] lg:rounded-[14px] rounded-lg lg:p-6 p-3 flex flex-col gap-5"
         >
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
             <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

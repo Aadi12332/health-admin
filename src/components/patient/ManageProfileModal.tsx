@@ -39,7 +39,7 @@ function ManageProfileModal({ open, onClose, data }: Props) {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="bg-white w-[95%] max-w-[778px] rounded-[14px] p-6 relative"
+        className="bg-white w-[95%] max-w-[778px] lg:rounded-[14px] rounded-lg lg:p-6 p-3 relative"
       >
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-[20px] text-[#101828]">
@@ -50,7 +50,7 @@ function ManageProfileModal({ open, onClose, data }: Props) {
           </button>
         </div>
 
-        <div className="flex justify-between items-center mb-8">
+        <div className="flex justify-between items-center flex-wrap gap-3 mb-8">
           <div className="flex gap-5 items-center">
             <img
               src={data.image}
@@ -79,7 +79,7 @@ function ManageProfileModal({ open, onClose, data }: Props) {
         </div>
 
         <div className="border-t border-[#E5E7EB] pt-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:gap-10 gap-3">
             {fields.map((item, i) => (
               <div key={i}>
                 <div className="flex items-center gap-2 text-[#667085] mb-1">

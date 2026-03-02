@@ -25,7 +25,7 @@ function PerformanceModal({ open, onClose, doctorName }: Props) {
 
   return (
     <div onClick={onClose} className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 !mt-0">
-      <div onClick={(e)=>e.stopPropagation()} className="bg-white w-[95%] max-w-[778px] rounded-[10px] p-8 relative">
+      <div onClick={(e)=>e.stopPropagation()} className="bg-white w-[95%] max-w-[778px] rounded-[10px] p-3 lg:p-6 relative">
         <div className="flex justify-between items-center">
           <h2 className="text-[22px] font-medium text-[#101828]">
             Performance & Activity
@@ -49,7 +49,7 @@ function PerformanceModal({ open, onClose, doctorName }: Props) {
                   data={data}
                   dataKey="value"
                   innerRadius={80}
-                  outerRadius={160}
+                  outerRadius={140}
                   paddingAngle={0}
                   stroke="none"
                 >
@@ -62,7 +62,7 @@ function PerformanceModal({ open, onClose, doctorName }: Props) {
           </div>
         </div>
 
-        <div className="mt-8 flex justify-center gap-10 flex-wrap">
+        <div className="mt-8 flex justify-center gap-6 flex-wrap">
           {data.map((item) => (
             <div key={item.name} className="flex items-center flex-col gap-3">
               <span

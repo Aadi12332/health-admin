@@ -22,7 +22,7 @@ function PendingProviders() {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-white p-6 rounded-[14px] border border-[#0000001A]">
+    <div className="bg-white lg:p-6 p-3  rounded-lg lg:rounded-[14px] border border-[#0000001A]">
       <div className="flex justify-between mb-6">
         <h2 className="text-[20px] text-[#0A0A0A]">Pending Provider Verification</h2>
         <button className="text-[#219580] text-sm underline" onClick={()=>navigate("/providers")}>View All</button>
@@ -32,7 +32,7 @@ function PendingProviders() {
         {providers.map((p, i) => (
           <div
             key={i}
-            className="flex items-center justify-between py-6 first:pt-0 last:pb-0 border-b last:border-none"
+            className="flex sm:flex-row flex-col sm:items-center justify-between py-6 first:pt-0 last:pb-0 border-b last:border-none"
           >
             <div className="flex items-center gap-5">
               <img
@@ -47,7 +47,7 @@ function PendingProviders() {
               </div>
             </div>
 
-            <div className="flex items-center gap-10">
+            <div className="flex sm:flex-row flex-col sm:items-center xl:gap-10 gap-3 ml-[72px] sm:ml-0">
               <div>
                 <p className="text-base text-[#101828]">Registered</p>
 
@@ -57,7 +57,7 @@ function PendingProviders() {
                 </div>
               </div>
 
-              <button className="bg-gradient-to-b from-[#219580] to-[#346079] text-white px-6 h-[32px] flex items-center rounded-lg text-sm font-medium">
+              <button className="bg-gradient-to-b from-[#219580] to-[#346079] text-white px-6 h-[32px] w-fit flex items-center rounded-lg text-sm font-medium">
                 Verify
               </button>
             </div>

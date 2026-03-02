@@ -110,7 +110,7 @@ function ActivityLog() {
 
       <div className="md:hidden divide-y divide-[#0000001A]">
         {activityData.map((item, index) => (
-          <div key={index} className="p-5 space-y-2">
+          <div key={index} className="lg:p-5 p-3 space-y-2">
             <div>
               <p className="text-xs text-[#667085]">Time</p>
               <p>{item.time}</p>

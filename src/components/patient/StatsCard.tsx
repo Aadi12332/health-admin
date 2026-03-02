@@ -7,9 +7,9 @@ type Props = {
 
 function StatsCard({ title, value, icon, bgColor }: Props) {
   return (
-    <div className="bg-white p-6 rounded-[14px] flex items-center border border-[#0000001A]">
+    <div className="bg-white lg:p-6 p-3 rounded-lg lg:rounded-[14px] flex items-center border border-[#0000001A]">
       <div className="flex items-center gap-3">
-        <div className={`w-12 h-12 min-w-12 rounded-[10px] flex items-center justify-center ${bgColor}`}>
+        <div className={`lg:w-12 w-9 lg:h-12 h-9 lg:min-w-12 min-w-9 rounded-lg lg:rounded-[10px] flex items-center justify-center ${bgColor}`}>
           {icon}
         </div>
         <div>

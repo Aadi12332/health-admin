@@ -29,7 +29,7 @@ function TelehealthTabs() {
 
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 lg:gap-6">
         {tabs.map((tab) => {
           const Icon = tab.icon
           const isActive = active === tab.key
@@ -42,7 +42,7 @@ function TelehealthTabs() {
                   tab.key as "video" | "waiting" | "chat"
                 )
               }
-              className={`flex items-center justify-center text-[18px] gap-4 p-6 h-[122px] rounded-[10px] border text-left transition ${
+              className={`flex items-center justify-center text-[18px] gap-4 lg:p-6 p-3 md:h-[122px] min-h-10 rounded-[10px] border text-left transition ${
                 isActive
                   ? "border-[#219580] bg-[#F4F8F8]"
                   : "border-[#E5E7EB] bg-white"
@@ -52,8 +52,8 @@ function TelehealthTabs() {
                 size={22}
                 className={
                   isActive
-                    ? "text-[#219580]"
-                    : "text-[#667085]"
+                    ? "text-[#219580] min-w-[22px]"
+                    : "text-[#667085] min-w-[22px]"
                 }
               />
               <span

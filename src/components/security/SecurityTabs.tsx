@@ -5,72 +5,67 @@ import SecuritySettings from "./SecuritySettings";
 import DataSecurityAdvanced from "./DataSecurityAdvanced";
 
 function SecurityTabs() {
-  const [active, setActive] = useState<"role" | "audit" | "hipaa" | "data">("role");
+  const [active, setActive] = useState<"role" | "audit" | "hipaa" | "data">(
+    "role",
+  );
 
   return (
     <div>
-      <div className="bg-[#E5E7EB] p-1 rounded-full w-full justify-between flex gap-2 mb-5">
-        <button
-          onClick={() => setActive("role")}
-          className={`px-6 py-2 rounded-full text-sm ${
-            active === "role"
-              ? "bg-gradient-to-b from-[#219580] to-[#346079] text-white"
-              : "text-black"
-          }`}
-        >
-          Role based access control
-        </button>
+      <div className="w-[calc(100vw-24px)] lg:w-full overflow-x-auto scroll-hide">
+        <div className="bg-[#E5E7EB] p-1 rounded-full lg:w-full w-[700px] lg:justify-between flex gap-2 mb-5">
+          <button
+            onClick={() => setActive("role")}
+            className={`px-6 py-2 rounded-full text-sm ${
+              active === "role"
+                ? "bg-gradient-to-b from-[#219580] to-[#346079] text-white"
+                : "text-black"
+            }`}
+          >
+            Role based access control
+          </button>
 
-        <button
-          onClick={() => setActive("audit")}
-          className={`px-6 py-2 rounded-full text-sm ${
-            active === "audit"
-              ? "bg-gradient-to-b from-[#219580] to-[#346079] text-white"
-              : "text-black"
-          }`}
-        >
-          Audit, logs and activity tracking 
-        </button>
+          <button
+            onClick={() => setActive("audit")}
+            className={`px-6 py-2 rounded-full text-sm ${
+              active === "audit"
+                ? "bg-gradient-to-b from-[#219580] to-[#346079] text-white"
+                : "text-black"
+            }`}
+          >
+            Audit, logs and activity tracking
+          </button>
 
-        <button
-          onClick={() => setActive("hipaa")}
-          className={`px-6 py-2 rounded-full text-sm ${
-            active === "hipaa"
-              ? "bg-gradient-to-b from-[#219580] to-[#346079] text-white"
-              : "text-black"
-          }`}
-        >
-          HIPAA - Ready data handling 
-        </button>
+          <button
+            onClick={() => setActive("hipaa")}
+            className={`px-6 py-2 rounded-full text-sm ${
+              active === "hipaa"
+                ? "bg-gradient-to-b from-[#219580] to-[#346079] text-white"
+                : "text-black"
+            }`}
+          >
+            HIPAA - Ready data handling
+          </button>
 
-        <button
-          onClick={() => setActive("data")}
-          className={`px-6 py-2 rounded-full text-sm ${
-            active === "data"
-              ? "bg-gradient-to-b from-[#219580] to-[#346079] text-white"
-              : "text-black"
-          }`}
-        >
-          Data Encryption, and Backups 
-        </button>
+          <button
+            onClick={() => setActive("data")}
+            className={`px-6 py-2 rounded-full text-sm ${
+              active === "data"
+                ? "bg-gradient-to-b from-[#219580] to-[#346079] text-white"
+                : "text-black"
+            }`}
+          >
+            Data Encryption, and Backups
+          </button>
+        </div>
       </div>
 
-      {active === "role" && (
-        <PermissionsManagement />
-      )}
+      {active === "role" && <PermissionsManagement />}
 
-      {active === "audit" &&
-        <ActivityLog />
-      }
+      {active === "audit" && <ActivityLog />}
 
-      {active === "hipaa" &&
-        <SecuritySettings />
-      }
+      {active === "hipaa" && <SecuritySettings />}
 
-      {active === "data" &&
-        <DataSecurityAdvanced />
-      }
-
+      {active === "data" && <DataSecurityAdvanced />}
     </div>
   );
 }

@@ -15,7 +15,7 @@ function EditDetailsModal({ open, onClose }: Props) {
 
   return (
     <div onClick={onClose} className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 !mt-0">
-      <div onClick={(e)=>e.stopPropagation()} className="bg-white w-[95%] max-w-[564px] rounded-[10px] p-8 relative">
+      <div onClick={(e)=>e.stopPropagation()} className="bg-white w-[95%] max-w-[564px] rounded-[10px] lg:p-6 p-3 relative">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-[20px] text-[#000000]">
             Edit Details
@@ -31,7 +31,7 @@ function EditDetailsModal({ open, onClose }: Props) {
               Assign
             </h3>
 
-            <div className="flex gap-10">
+            <div className="flex lg:gap-10 gap-3">
               <CommonDropdown
                 placeholder="Specialty"
                 options={[
@@ -54,13 +54,13 @@ function EditDetailsModal({ open, onClose }: Props) {
             </div>
           </div>
 
-          <div className="flex justify-between gap-10">
+          <div className="flex justify-between lg:gap-10 gap-3">
             <div className="flex-1">
               <h3 className="text-[16px] text-black mb-3">
                 Accounts
               </h3>
 
-              <div className="flex gap-14 text-[16px] text-[#5F6D7E]">
+              <div className="flex lg:gap-14 gap-3 text-[16px] text-[#5F6D7E]">
                 {["Enable", "Disable"].map((option) => (
                   <label key={option} className="flex items-center gap-2 text-sm text-[#4A5565]">
                     <input
@@ -81,7 +81,7 @@ function EditDetailsModal({ open, onClose }: Props) {
                 Pricing
               </h3>
 
-              <div className="flex gap-14 text-[24px] text-[#5F6D7E]">
+              <div className="flex lg:gap-14 gap-3 text-[24px] text-[#5F6D7E]">
                 {["Fixed", "Variable"].map((option) => (
                   <label key={option} className="flex items-center gap-2 text-sm text-[#4A5565]">
                     <input

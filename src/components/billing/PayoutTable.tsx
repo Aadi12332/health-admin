@@ -56,57 +56,60 @@ const payoutData: Payout[] = [
 
 function PayoutTable() {
   return (
-    <div className="bg-white border border-[#0000001A] rounded-[14px] overflow-hidden">
-      <div className="hidden md:grid grid-cols-6 bg-gray-50 px-6 py-4 text-xs text-[#4A5565]">
-        <div>PROVIDER</div>
-        <div>LAST PAYOUT</div>
-        <div>TIME</div>
-        <div>TOTAL PAYOUT</div>
-        <div className="text-center">PAYMENT METHOD</div>
-        <div className="text-center">STATUS</div>
-      </div>
+<div className="w-[calc(100vw-24px)] lg:w-full overflow-x-auto scroll-hide">
+  <table className="min-w-[700px] w-full bg-white border border-[#0000001A] lg:rounded-[14px] rounded-lg border-separate border-spacing-0">
+    
+    <thead>
+      <tr className="bg-gray-50 text-xs text-[#4A5565]">
+        <th className="px-6 py-4 text-left font-medium">PROVIDER</th>
+        <th className="px-6 py-4 text-left font-medium">LAST PAYOUT</th>
+        <th className="px-6 py-4 text-left font-medium">TIME</th>
+        <th className="px-6 py-4 text-left font-medium">TOTAL PAYOUT</th>
+        <th className="px-6 py-4 text-center font-medium">PAYMENT METHOD</th>
+        <th className="px-6 py-4 text-center font-medium">STATUS</th>
+      </tr>
+    </thead>
 
-      {payoutData.map((item) => (
-        <div
+    <tbody>
+      {payoutData.map((item, index) => (
+        <tr
           key={item.id}
-          className="grid grid-cols-1 md:grid-cols-6 px-6 py-5 border-t border-[#E5E7EB] items-center gap-4"
+          className="text-sm text-[#101828]"
         >
-          <div className="flex items-center gap-2">
-            <img
-              src={item.image}
-              alt={item.name}
-              className="w-10 h-10 rounded-full object-cover"
-            />
-            <span className="text-[#101828] text-sm">
-              {item.name}
-            </span>
-          </div>
+          <td className="px-6 py-4 border-t border-[#E5E7EB]">
+            <div className="flex items-center gap-2">
+              <img
+                src={item.image}
+                alt={item.name}
+                className="w-10 h-10 rounded-full object-cover"
+              />
+              <span>{item.name}</span>
+            </div>
+          </td>
 
-          <div className="text-[#101828] text-sm">
+          <td className="px-6 py-4 border-t border-[#E5E7EB]">
             {item.lastPayout}
-          </div>
+          </td>
 
-          <div className="text-[#101828] text-sm">
+          <td className="px-6 py-4 border-t border-[#E5E7EB]">
             {item.time}
-          </div>
+          </td>
 
-          <div className="text-[#101828] text-sm">
+          <td className="px-6 py-4 border-t border-[#E5E7EB]">
             ${item.total}
-          </div>
+          </td>
 
-          <div className="text-center">
+          <td className="px-6 py-4 border-t border-[#E5E7EB] text-center">
             {item.method === "PayPal" ? (
-              <span className="bg-[#135DA3] text-white text-xs px-1 py-1 rounded">
+              <span className="bg-[#135DA3] text-white text-xs px-2 py-1 rounded">
                 PayPal
               </span>
             ) : (
-              <span className="text-[#101828] text-sm">
-                Bank Transfer
-              </span>
+              <span>Bank Transfer</span>
             )}
-          </div>
+          </td>
 
-          <div className="text-center">
+          <td className="px-6 py-4 border-t border-[#E5E7EB] text-center">
             <span
               className={`px-3 py-1 rounded-full text-sm ${
                 item.status === "confirmed"
@@ -116,10 +119,12 @@ function PayoutTable() {
             >
               {item.status}
             </span>
-          </div>
-        </div>
+          </td>
+        </tr>
       ))}
-    </div>
+    </tbody>
+  </table>
+</div>
   )
 }
 

@@ -14,7 +14,7 @@ function PageHeader({
   onClick
 }: Props) {
   return (
-    <div className="flex items-center justify-between gap-3">
+    <div className="flex items-center justify-between gap-3 flex-wrap">
       <div>
         <h1 className="text-[24px] text-[#101828]">
           {title}

@@ -67,7 +67,7 @@ function AppointmentsList({ status }: { status: string }) {
               <div className="flex-1">
                 <h3 className="text-[16px] text-[#101828]">{item.doctor}</h3>
                 <p className="text-[#4A5565] text-sm mb-2">Provider</p>
-                <div className="grid grid-cols-2 gap-3 w-full">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
                   <div>
                     <p className="text-[#9CA1A8] text-sm mb-1">
                       Patient:{" "}
@@ -129,23 +129,23 @@ function AppointmentsList({ status }: { status: string }) {
           </div>
 
             {status === "upcoming" && (
-              <div className="flex justify-end gap-4 flex-wrap w-full mt-5">
+              <div className="flex justify-end sm:gap-4 gap-2 flex-wrap w-full mt-5">
                 {item.status === "Confirmed" && (
-                  <button className="bg-gradient-to-b from-[#219580] to-[#346079] text-white px-6 py-2 flex-1 rounded-lg flex justify-center items-center gap-2">
+                  <button className="bg-gradient-to-b min-w-[150px] from-[#219580] to-[#346079] text-white px-2 md:px-6 py-2 flex-1 rounded-lg flex justify-center items-center gap-2">
                     <VideoIcon size={16} />
                     Join Session
                   </button>
                 )}
 
                 <button onClick={() => setModalType("reschedule")}
-                  className={`border border-[#219580] text-[#219580] px-6 py-2 rounded-lg justify-center flex items-center gap-2 ${item.status === "Confirmed" ? "" : "flex-1"}`}
+                  className={`border border-[#219580] text-[#219580] px-2 md:px-6 py-2 rounded-lg justify-center flex items-center gap-2 ${item.status === "Confirmed" ? "" : "flex-1"}`}
                 >
                   <Edit size={16} />
                   Reschedule
                 </button>
 
                 <button onClick={() => setModalType("cancel")}
-                  className={`border border-red-400 text-red-500 px-6 py-2 rounded-lg justify-center flex items-center gap-2 ${item.status === "Confirmed" ? "" : "flex-1"}`}
+                  className={`border border-red-400 text-red-500 px-2 md:px-6 py-2 rounded-lg justify-center flex items-center gap-2 ${item.status === "Confirmed" ? "" : "flex-1"}`}
                 >
                   <X size={16} />
                   Cancel

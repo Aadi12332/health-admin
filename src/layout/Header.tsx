@@ -1,9 +1,17 @@
-import { Search, Bell } from "lucide-react"
+import { Search, Bell, Menu } from "lucide-react"
+type HeaderProps = {
+  toggleSidebar: () => void
+}
 
-function Header() {
+function Header({ toggleSidebar }: HeaderProps) {
   return (
-    <header className="h-[64px] border-b border-[#E5E7EB] bg-white lg:px-8 px-3 flex items-center justify-between">
-      <div className="relative w-[520px] bg-[#F9FAFB]">
+    <header className="h-[64px] border-b border-[#E5E7EB] bg-white lg:px-8 px-3 flex items-center gap-3 justify-between">
+      
+      <Menu 
+        className="cursor-pointer lg:hidden"
+        onClick={toggleSidebar}
+      />
+      <div className="relative w-[200px] lg:w-[520px] bg-[#F9FAFB] hidden sm:block">
         <Search
           size={18}
           className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
@@ -28,7 +36,7 @@ function Header() {
             alt="avatar"
             className="w-10 h-10 rounded-full object-cover"
           />
-          <div>
+          <div className="hidden sm:block">
             <p className="text-sm font-semibold text-gray-800">
               Sarah Johnson
             </p>
