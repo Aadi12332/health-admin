@@ -17,7 +17,7 @@ function TelehealthTabs() {
     },
     {
       key: "waiting",
-      label: "Virtual waiting room",
+      label: "Audio waiting room",
       icon: Hourglass
     },
     {
